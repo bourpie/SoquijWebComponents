@@ -1,0 +1,1 @@
+export {SqNavPrimaireIcon} from './SqNavPrimaireIcon'

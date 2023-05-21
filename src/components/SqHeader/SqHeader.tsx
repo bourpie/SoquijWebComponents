@@ -5,6 +5,7 @@ import { SqNavPrimaire } from '../SqNavPrimaire';
 import { SqLogoSoquij } from '../SqLogoSoquij/SqLogoSoquij';
 import { SqNavSecondaire } from '../SqNavSecondaire';
 
+
 export const SqHeader = () => {
 
   const [logo, setLogo] = useState("")
@@ -52,4 +53,5 @@ export const SqHeader = () => {
         </div>
       </nav>
     </header>
+
 )};

@@ -1,34 +1,39 @@
 import './SqNavPrimaire.scss'
+import * as NavigationMenu from '@radix-ui/react-navigation-menu';
+import { SqNavPrimaireIcon } from '../SqNavPrimaireIcon/SqNavPrimaireIcon';
 
 export function SqNavPrimaire() {
   return (
-    <ul className="sq-nav-primaire">
-      <li>
-        <a href="">Produits 
-        <span
-                            className="sq-icon--fleche"
-                            aria-hidden="true"
-                          >
-                            <svg
-                              preserveAspectRatio="xMidYMid meet"
-                              viewBox="2 -4 32 32"
-                              className="SqSvgIcon  SqBarNav-ExpandIcon _oldSyntax"
-                              width="32"
-                              height="32"
-                            >
-                              <g>
-                                <path
-                                  d="M118.957-110.289l-4,4-4-4"
-                                  transform="translate(-96.543 119.703)"
-                                ></path>
-                              </g>
-                            </svg>
-                          </span>   
-      
-        </a>
-      </li>
-      <li><a href="">Formations <span className="sq-icon--fleche"><svg preserveAspectRatio="xMidYMid meet" viewBox="2 -4 32 32" className="SqSvgIcon  SqBarNav-ExpandIcon" width="32" height="32"><g><path d="M118.957-110.289l-4,4-4-4" transform="translate(-96.543 119.703)"></path></g></svg></span></a></li>
-      <li><a href="">Trouver une décision</a></li>
-    </ul>
+    <NavigationMenu.Root>
+      <NavigationMenu.List className="sq-nav-primaire">
+        <NavigationMenu.Item>
+          <NavigationMenu.Trigger>
+            Produits <SqNavPrimaireIcon />
+          </NavigationMenu.Trigger>
+          <NavigationMenu.Content className="NavigationMenuContent">
+              Du contenu
+          </NavigationMenu.Content>
+        </NavigationMenu.Item>
+        <NavigationMenu.Item>
+          <NavigationMenu.Trigger>
+            Formations <SqNavPrimaireIcon />
+          </NavigationMenu.Trigger>
+          <NavigationMenu.Content className="NavigationMenuContent">
+            <div className="sq-nav-primaire--panel">
+              Du contenu
+            </div>
+          </NavigationMenu.Content>
+        </NavigationMenu.Item>
+        <NavigationMenu.Item>
+          <NavigationMenu.Link
+            className="text-violet11 hover:bg-violet3 focus:shadow-violet7 block select-none rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none focus:shadow-[0_0_0_2px]"
+            href="https://github.com/radix-ui"
+          >
+            Github
+          </NavigationMenu.Link>
+        </NavigationMenu.Item>
+      </NavigationMenu.List>
+      <NavigationMenu.Viewport className="NavigationMenuViewport" />
+    </NavigationMenu.Root>  
   )
 }

@@ -1,4 +1,5 @@
 import './SqNavSecondaire.scss'
+  
 
 interface SqNavSecondaireProps {
     liens: Lien[];
@@ -26,6 +27,7 @@ export function SqNavSecondaire({
     liens
 }: SqNavSecondaireProps) {
     return (
+
         <ul className="sq-nav-secondaire">
             {
                 liens && liens.map((item, index) => (
