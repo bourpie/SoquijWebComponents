@@ -28,8 +28,8 @@ export function SqNavSecondaire({
     return (
         <ul className="sq-nav-secondaire">
             {
-                liens && liens.map(item => (
-                    <li>
+                liens && liens.map((item, index) => (
+                    <li key={index}>
                         <a href={item.urlTo}>{item.texte}
                             {item.iconeDto && 
                                 <img 

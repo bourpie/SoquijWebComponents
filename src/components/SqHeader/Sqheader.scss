@@ -40,7 +40,7 @@
         &--toolbar {
             grid-column-end: span 12;
             align-items: flex-end;
-            min-height: 64px;
+            height: 80px;
             display: flex;
             position: relative;
         }
@@ -54,6 +54,8 @@
             flex-grow: 1;
             height: 1.5rem;
             align-self: center;
+            position: relative;
+            top: 12px;
         }
 
         &--boutons {

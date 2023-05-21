@@ -28,7 +28,7 @@ export function SqLogoSoquij({
         href={href}
         {...props}
     >
-        <img src={src} alt={alt} />
+        <img height="71" width="170" src={src} alt={alt} />
     </a>
   )
 }

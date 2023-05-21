@@ -17,7 +17,7 @@
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.8s;
+  transition: background 0.8s ease;
 
   &:hover {
     border-color: var(--bg-color-hover);
