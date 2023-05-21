@@ -1,0 +1,1 @@
+export {SqLogoSoquij} from './SqLogoSoquij'
