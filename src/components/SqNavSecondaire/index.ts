@@ -1,0 +1,1 @@
+export { SqNavSecondaire } from './SqNavSecondaire'
