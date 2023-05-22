@@ -3,7 +3,8 @@ import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { SqNavPrimaireIcon } from '../SqNavPrimaireIcon/SqNavPrimaireIcon';
 
 export function SqNavPrimaire() {
-  return (
+
+  return (  
     <NavigationMenu.Root>
       <NavigationMenu.List className="sq-nav-primaire">
         <NavigationMenu.Item>
@@ -11,7 +12,7 @@ export function SqNavPrimaire() {
             Produits <SqNavPrimaireIcon />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="NavigationMenuContent">
-              Du contenu
+              Mes produits
           </NavigationMenu.Content>
         </NavigationMenu.Item>
         <NavigationMenu.Item>
@@ -19,9 +20,9 @@ export function SqNavPrimaire() {
             Formations <SqNavPrimaireIcon />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="NavigationMenuContent">
-            <div className="sq-nav-primaire--panel">
-              Du contenu
-            </div>
+
+              Mes formations
+
           </NavigationMenu.Content>
         </NavigationMenu.Item>
         <NavigationMenu.Item>
@@ -33,7 +34,7 @@ export function SqNavPrimaire() {
           </NavigationMenu.Link>
         </NavigationMenu.Item>
       </NavigationMenu.List>
-      <NavigationMenu.Viewport className="NavigationMenuViewport" />
+      <NavigationMenu.Viewport />  
     </NavigationMenu.Root>  
   )
 }

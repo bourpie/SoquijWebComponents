@@ -47,7 +47,7 @@ export const SqHeader = () => {
             <SqNavPrimaire />
           </div>
           <div className='soquij-nav--boutons'>
-              <SqButton href="" variant="outline" label="Nous joindre" />
+              <SqButton href="" variant="outlined" label="Nous joindre" />
               <SqButton href="" label="Se connecter" />
           </div>
         </div>
