@@ -1,7 +1,6 @@
 import './SqButton.scss';
 import Button from '@mui/material/Button';
 import CircularProgress from '@mui/joy/CircularProgress';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 interface ButtonProps {
   /**

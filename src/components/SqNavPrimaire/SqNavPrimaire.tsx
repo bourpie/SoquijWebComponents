@@ -1,6 +1,7 @@
 import './SqNavPrimaire.scss'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { SqNavPrimaireIcon } from '../SqNavPrimaireIcon/SqNavPrimaireIcon';
+import { SqNavPrimaireSmenu } from '../SqNavPrimaireSmenu/SqNavPrimaireSmenu';
 
 export function SqNavPrimaire() {
 
@@ -12,7 +13,7 @@ export function SqNavPrimaire() {
             Produits <SqNavPrimaireIcon />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="NavigationMenuContent">
-              Mes produits
+            <SqNavPrimaireSmenu />
           </NavigationMenu.Content>
         </NavigationMenu.Item>
         <NavigationMenu.Item>
@@ -20,17 +21,14 @@ export function SqNavPrimaire() {
             Formations <SqNavPrimaireIcon />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="NavigationMenuContent">
-
-              Mes formations
-
+            <SqNavPrimaireSmenu />
           </NavigationMenu.Content>
         </NavigationMenu.Item>
         <NavigationMenu.Item>
           <NavigationMenu.Link
-            className="text-violet11 hover:bg-violet3 focus:shadow-violet7 block select-none rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none focus:shadow-[0_0_0_2px]"
             href="https://github.com/radix-ui"
           >
-            Github
+            Trouver une décision
           </NavigationMenu.Link>
         </NavigationMenu.Item>
       </NavigationMenu.List>

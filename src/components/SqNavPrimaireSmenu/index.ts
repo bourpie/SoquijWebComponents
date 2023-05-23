@@ -1,0 +1,1 @@
+export { SqNavPrimaireSmenu} from './SqNavPrimaireSmenu'

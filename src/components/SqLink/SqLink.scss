@@ -1,0 +1,46 @@
+@import '../../Styles/couleurs';
+
+.sq-link {
+    font-family: Roboto, sans-serif;
+    color: $SqNoir;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.16px;
+    text-decoration: none;
+
+    &--variant-default {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-decoration-color: $SqOrange900;
+        text-underline-offset: 4.5px;
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            text-decoration-thickness: 2px;
+            background-color: $SqGrisMoyen;
+        }
+    }
+
+    &--variant-footer {
+        font-size: 0.8125rem;
+        line-height: 1.25rem;
+        letter-spacing: 0.13px;
+        color: $SqGrisFermont;
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            text-decoration-thickness: 1px;
+            text-decoration: underline;
+            text-underline-offset: 4.5px;
+            text-decoration-color: $SqGrisFermont;
+            background-color: $SqGrisMoyen;
+        }
+    }
+
+    &--size-small {
+        font-size: 0.8125rem;
+        line-height: 1.25rem;
+        letter-spacing: 0.13px;
+    }
+
+}
