@@ -4,7 +4,7 @@ interface LinkProps {
   /**
    * Texte du lien
    */
-  text: string;
+  text?: string;
   /**
    * Url
    */
@@ -12,11 +12,15 @@ interface LinkProps {
   /**
    * Variantes
    */
-  variant?: 'default' | 'footer';
+  variant?: 'default' | 'footer' | 'megamenu';
   /**
    * Dimensions disponibles
    */
   size?: 'normal' | 'small';
+  /**
+   * Themes
+   */
+  theme?: 'grey' | 'blue' | 'dark'
 }
   
 /**
@@ -28,11 +32,12 @@ export function SqLink({
   variant = 'default',
   size,
   text,
+  theme,
   ...props
 }: LinkProps) {
 
   /**
-   * Spécifications pour que liens externes respectent les normes d'accessibilités
+   * Specs de liens externes pour les normes d'accessibilités
    */
   const isExternal = /^https?:\/\/((?!(.*\.)?soquij\.qc\.ca)|localhost)/.test(`${href}`);
   const isPdf = href.toLowerCase().endsWith(".pdf");
@@ -41,14 +46,23 @@ export function SqLink({
   const target = isExternal ? "_blank" : "";
   const title = isExternal ? "S'ouvre dans un nouvel onglet." : "";
 
+  /**
+   * Styles pour les différents scénarios
+   */
+  const variants = () => { return variant ? `sq-link--variant-${variant}` : null}
+  const sizes = () => { return size ? `sq-link--size-${size}` : null}
+  const themes = () => { return theme ? `sq-link--theme-${theme}` : null}
+
   return ( 
     <>
       <a
         href={href}
         className={[
           'sq-link', 
-          `sq-link--variant-${variant}`, 
-          `sq-link--size-${size}`].join(' ')}
+          variants(), 
+          sizes(),
+          themes()
+        ].join(' ').trim()}
         rel={rel}
         target={target}
         title={title}

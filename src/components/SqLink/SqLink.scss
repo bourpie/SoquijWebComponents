@@ -29,7 +29,7 @@
         transition: all .4s ease-in-out;
 
         &:hover {
-            text-decoration-thickness: 1px;
+            text-decoration-thickness: 2px;
             text-decoration: underline;
             text-underline-offset: 4.5px;
             text-decoration-color: $SqGrisFermont;
@@ -37,10 +37,30 @@
         }
     }
 
+    &--variant-megamenu {
+
+        display: inline-block;
+        padding-block: 1px;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: $SqWhite;
+            color: $SqOrange900;
+        }
+    }
+
     &--size-small {
         font-size: 0.8125rem;
         line-height: 1.25rem;
         letter-spacing: 0.13px;
+    }
+
+    &--theme-dark {
+        color: $SqGrisRouyn;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
     }
 
 }

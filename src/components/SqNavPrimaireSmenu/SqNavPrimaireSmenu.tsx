@@ -1,4 +1,5 @@
 import './SqNavPrimaireSmenu.scss'
+import { SqLink } from '../SqLink';
 
 export function SqNavPrimaireSmenu() {
   return (
@@ -13,28 +14,29 @@ export function SqNavPrimaireSmenu() {
         <div>
           <h3>Savoir judiciaire</h3>
           <ul>
-              <li><a href="">Item</a></li>
-              <li><a href="">Item</a></li>
-              <li><a href="">Item</a></li>
-              <li><a href="">Item</a></li>
+              <li><SqLink text="Item 1" variant="megamenu" /></li>
+              <li><SqLink text="Item 2" variant="megamenu" /></li>
+              <li><SqLink text="Item 3" variant="megamenu" /></li>
+              <li><SqLink text="Item 4" variant="megamenu" /></li>
+
           </ul>
         </div>
         <div>
           <h3>Savoir juridique</h3>
           <ul>
-              <li><a href="">Item</a></li>
-              <li><a href="">Item</a></li>
-              <li><a href="">Item</a></li>
-              <li><a href="">Item</a></li>
+              <li><SqLink text="Item 1" variant="megamenu" /></li>
+              <li><SqLink text="Item 2" variant="megamenu" /></li>
+              <li><SqLink text="Item 3" variant="megamenu" /></li>
+              <li><SqLink text="Item 4" variant="megamenu" /></li>
           </ul>
         </div>
         <div>
           <h3>Informer</h3>
           <ul>
-              <li><a href="">Item</a></li>
-              <li><a href="">Item</a></li>
-              <li><a href="">Item</a></li>
-              <li><a href="">Item</a></li>
+              <li><SqLink text="Item 1" variant="megamenu" /></li>
+              <li><SqLink text="Item 2" variant="megamenu" /></li>
+              <li><SqLink text="Item 3" variant="megamenu" /></li>
+              <li><SqLink text="Item 4" variant="megamenu" /></li>
           </ul>
         </div>
       </div>

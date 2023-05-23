@@ -9,7 +9,7 @@ export function SqNavPrimaire() {
     <NavigationMenu.Root>
       <NavigationMenu.List className="sq-nav-primaire">
         <NavigationMenu.Item>
-          <NavigationMenu.Trigger>
+          <NavigationMenu.Trigger className='megamenu-trigger'>
             Produits <SqNavPrimaireIcon />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="NavigationMenuContent">
@@ -17,7 +17,7 @@ export function SqNavPrimaire() {
           </NavigationMenu.Content>
         </NavigationMenu.Item>
         <NavigationMenu.Item>
-          <NavigationMenu.Trigger>
+          <NavigationMenu.Trigger className='megamenu-trigger'>
             Formations <SqNavPrimaireIcon />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="NavigationMenuContent">
@@ -27,6 +27,7 @@ export function SqNavPrimaire() {
         <NavigationMenu.Item>
           <NavigationMenu.Link
             href="https://github.com/radix-ui"
+            className='megamenu-trigger'
           >
             Trouver une décision
           </NavigationMenu.Link>

@@ -5,5 +5,11 @@
         gap: 1rem;
         max-width: 1920px;
         margin: 0 auto;
+
+        ul {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+        }
     }
 }

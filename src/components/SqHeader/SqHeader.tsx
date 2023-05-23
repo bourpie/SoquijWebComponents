@@ -1,10 +1,9 @@
+import './SqHeader.scss';
 import { useState, useEffect } from 'react';
 import { SqButton } from '../SqButton/SqButton';
-import './SqHeader.scss';
 import { SqNavPrimaire } from '../SqNavPrimaire';
 import { SqLogoSoquij } from '../SqLogoSoquij/SqLogoSoquij';
 import { SqNavSecondaire } from '../SqNavSecondaire';
-
 
 export const SqHeader = () => {
 
