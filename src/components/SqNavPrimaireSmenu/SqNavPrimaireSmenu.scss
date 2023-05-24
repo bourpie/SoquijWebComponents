@@ -1,15 +1,83 @@
 .sq-nav-primaire--sous-menu {
+    background: #f2f2f2;
 
-    .wrapper {
-        display: flex;
-        gap: 1rem;
-        max-width: 1920px;
-        margin: 0 auto;
 
-        ul {
-            margin: 0;
-            list-style: none;
-            padding: 0;
-        }
+
+}
+
+/* styles.css */
+.NavigationMenuContent {
+    animation-duration: 250ms;
+    animation-timing-function: ease;
+}
+
+.NavigationMenuContent[data-motion='from-start'] {
+    animation-name: enterFromTop;
+}
+
+.NavigationMenuContent[data-motion='from-end'] {
+    animation-name: enterFromBottom;
+}
+
+.NavigationMenuContent[data-motion='to-start'] {
+    animation-name: exitToTop;
+}
+
+.NavigationMenuContent[data-motion='to-end'] {
+    animation-name: exitToBottom;
+}
+
+.NavigationMenuViewport {
+    position: relative;
+    width: var(--radix-navigation-menu-viewport-width);
+    height: var(--radix-navigation-menu-viewport-height);
+    transition: width, height, 500ms ease;
+}
+
+@keyframes enterFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes enterFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes exitToTop {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes exitToBottom {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-50px);
     }
 }

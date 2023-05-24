@@ -8,6 +8,10 @@
     letter-spacing: 0.16px;
     text-decoration: none;
 
+    &~.sq-icon {
+        margin-left: .5rem;
+    }
+
     &--variant-default {
         text-decoration: underline;
         text-decoration-thickness: 1px;
@@ -35,6 +39,12 @@
             text-decoration-color: $SqGrisFermont;
             background-color: $SqGrisMoyen;
         }
+
+        &~.sq-icon {
+            margin-left: .3rem;
+            width: .75rem;
+            height: .75rem;
+        }
     }
 
     &--variant-megamenu {
@@ -53,6 +63,7 @@
         font-size: 0.8125rem;
         line-height: 1.25rem;
         letter-spacing: 0.13px;
+
     }
 
     &--theme-dark {

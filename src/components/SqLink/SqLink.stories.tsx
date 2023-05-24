@@ -24,7 +24,7 @@ export const Small: Story = {
     size: 'small'
   },
 };
-export const SmallFooter: Story = {
+export const Footer: Story = {
   args: {
     text: 'Lien small footer',
     href: 'https://google.com',
@@ -66,6 +66,31 @@ export const Megamenu: Story = {
         )
     ]
 };
+
+export const LienExterne: Story = {
+  args: {
+    text: 'Lien externe',
+    href: 'https://formations.soquij.qc.ca'
+  }
+}
+
+export const LienExterneDark: Story = {
+  args: {
+    text: 'Lien externe',
+    theme: 'dark',
+    href: 'https://formations.soquij.qc.ca'
+  },
+  decorators: [
+      (Story) => (
+          <div style={{
+            backgroundColor: 'rgba(0, 0, 22, 1)',
+            padding: '3rem'
+          }}>
+              <Story />
+          </div>
+      )
+  ]
+}
 
 
 

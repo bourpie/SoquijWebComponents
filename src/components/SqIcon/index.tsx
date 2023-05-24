@@ -1,0 +1,1 @@
+export { SqIcon } from './SqIcon'

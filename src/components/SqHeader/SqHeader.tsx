@@ -11,14 +11,16 @@ export const SqHeader = () => {
   const [logoAlt, setLogoAlt] = useState("")
   const [siteUrl, setSiteUrl] = useState("")
   const [liensSecondaires, setLiensSecondaires] = useState([])
+  const [liensPrimaires, setLiensPrimaires] = useState([])
 
   async function getContent() {
     const response = await fetch("https://api-aristote.soquij.qc.ca/Contenu/fr");
-    const jsonData = await response.json();
-    await setLogo(jsonData.headerDto.logo.url)
-    await setSiteUrl(jsonData.headerDto.logo.lienDto.urlTo)
-    await setLogoAlt(jsonData.headerDto.logo.lienDto.name)
-    await setLiensSecondaires(jsonData.headerDto.lienSecondaireDtos)
+    const json = await response.json();
+    await setLogo(json.headerDto.logo.url)
+    await setSiteUrl(json.headerDto.logo.lienDto.urlTo)
+    await setLogoAlt(json.headerDto.logo.lienDto.name)
+    await setLiensSecondaires(json.headerDto.lienSecondaireDtos)
+    await setLiensPrimaires(json.headerDto.navigationDto.menuPrincipalDtos)
   }
 
   useEffect(() => {
@@ -43,7 +45,7 @@ export const SqHeader = () => {
             />
           </div>
           <div className='soquij-nav--megamenu'>
-            <SqNavPrimaire />
+            <SqNavPrimaire liens={liensPrimaires} />
           </div>
           <div className='soquij-nav--boutons'>
               <SqButton href="" variant="outlined" label="Nous joindre" />

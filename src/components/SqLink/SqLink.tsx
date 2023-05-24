@@ -1,6 +1,11 @@
 import './SqLink.scss'
+import { SqIcon } from '../SqIcon'
 
 interface LinkProps {
+  /**
+   * Variantes
+   */
+  variant?: 'default' | 'footer' | 'megamenu';
   /**
    * Texte du lien
    */
@@ -10,10 +15,6 @@ interface LinkProps {
    */
   href?: string;
   /**
-   * Variantes
-   */
-  variant?: 'default' | 'footer' | 'megamenu';
-  /**
    * Dimensions disponibles
    */
   size?: 'normal' | 'small';
@@ -21,6 +22,7 @@ interface LinkProps {
    * Themes
    */
   theme?: 'grey' | 'blue' | 'dark'
+  
 }
   
 /**
@@ -38,20 +40,30 @@ export function SqLink({
 
   /**
    * Specs de liens externes pour les normes d'accessibilités
-   */
+  */
   const isExternal = /^https?:\/\/((?!(.*\.)?soquij\.qc\.ca)|localhost)/.test(`${href}`);
+  const isFormation = /formations[-.]/.test(`${href}`);
   const isPdf = href.toLowerCase().endsWith(".pdf");
-  const isNewTab = isExternal || isPdf;
-  const rel = isExternal ? "noopener noreferrer" : "";
-  const target = isExternal ? "_blank" : "";
-  const title = isExternal ? "S'ouvre dans un nouvel onglet." : "";
+  const isNewTab = isExternal || isPdf || isFormation;
+
+  const rel = isNewTab ? "noopener noreferrer" : null;
+  const target = isNewTab ? "_blank" : null;
+  const title = isNewTab ? "S'ouvre dans un nouvel onglet." : null;
 
   /**
    * Styles pour les différents scénarios
-   */
+  */
   const variants = () => { return variant ? `sq-link--variant-${variant}` : null}
   const sizes = () => { return size ? `sq-link--size-${size}` : null}
   const themes = () => { return theme ? `sq-link--theme-${theme}` : null}
+
+  const IconeLienExterne = () => {
+    if (theme === 'dark') {
+      return <SqIcon icon="iconLienExterneLight" />
+    }  else {
+      return <SqIcon icon="iconLienExterne" />
+    }
+  }
 
   return ( 
     <>
@@ -70,7 +82,7 @@ export function SqLink({
       >
         {text}
       </a>
-      {isNewTab && `(externe)`}
+      {isNewTab && <IconeLienExterne />}
     </>
   );
 }

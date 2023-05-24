@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="67" height="67" viewBox="0 0 67 67">
+  <g id="icone_cadenas" transform="translate(-679 -236)">
+    <g id="streamline-icon-credit-card-lock_64x64" data-name="streamline-icon-credit-card-lock@64x64" transform="translate(699.167 250.389)">
+      <rect id="Rectangle_5" data-name="Rectangle 5" width="26.667" height="22.222" rx="4" transform="translate(0 13.333)" fill="none" stroke="#1d2141" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_2" data-name="Path 2" d="M50.889,30h0A8.889,8.889,0,0,0,42,38.889v4.444H59.778V38.889A8.889,8.889,0,0,0,50.889,30Z" transform="translate(-37.556 -30)" fill="none" stroke="#1d2141" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_3" data-name="Path 3" d="M50.111,51.077A1.111,1.111,0,1,1,49,52.188a1.111,1.111,0,0,1,1.111-1.111" transform="translate(-36.778 -27.658)" fill="none" stroke="#1d2141" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+    <path id="Path_21" data-name="Path 21" d="M2,34A32,32,0,1,0,34,2,32,32,0,0,0,2,34Z" transform="translate(678.5 235.5)" fill="none" stroke="#1d2141" stroke-width="3"/>
+  </g>
+</svg>

@@ -1,45 +1,67 @@
 import './SqNavPrimaireSmenu.scss'
+import { AnimatePresence, motion } from 'framer-motion'
 import { SqLink } from '../SqLink';
+import { SqCard } from '../SqCard'
+ 
+const dropIn = {
+  hidden: {
+    y: "-120px",
+    opacity: 0
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration:5,
+      type: "spring",
+      damping: 50,
+      stiffness: 1000,
+    }
+  },
+  exit: {
+    y: "-120px",
+    opacity: 0,
+  }
 
-export function SqNavPrimaireSmenu() {
+}
+
+export function SqNavPrimaireSmenu({contenu}) {
+
   return (
-    <div className="sq-nav-primaire--sous-menu">
+    <AnimatePresence>
+    <motion.div
+      key={contenu}
+      className="sq-nav-primaire--sous-menu"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3}}
+      exit={{ opacity: 0, y: -20 }}
+    >
       <div className="wrapper">
-        <div>
-          <h3>Tous les produits</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, eum.</p>
-          <p>Accusantium eius, id eum nam soluta dolor ullam consequuntur numquam.</p>
-          <p><a href="">Aller</a></p>
-        </div>
-        <div>
-          <h3>Savoir judiciaire</h3>
-          <ul>
-              <li><SqLink text="Item 1" variant="megamenu" /></li>
-              <li><SqLink text="Item 2" variant="megamenu" /></li>
-              <li><SqLink text="Item 3" variant="megamenu" /></li>
-              <li><SqLink text="Item 4" variant="megamenu" /></li>
-
-          </ul>
-        </div>
-        <div>
-          <h3>Savoir juridique</h3>
-          <ul>
-              <li><SqLink text="Item 1" variant="megamenu" /></li>
-              <li><SqLink text="Item 2" variant="megamenu" /></li>
-              <li><SqLink text="Item 3" variant="megamenu" /></li>
-              <li><SqLink text="Item 4" variant="megamenu" /></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Informer</h3>
-          <ul>
-              <li><SqLink text="Item 1" variant="megamenu" /></li>
-              <li><SqLink text="Item 2" variant="megamenu" /></li>
-              <li><SqLink text="Item 3" variant="megamenu" /></li>
-              <li><SqLink text="Item 4" variant="megamenu" /></li>
-          </ul>
-        </div>
+        
+          <div className='SqMegaMenu-MenuItem SqMegaMenu-ColonneImage'>
+            <SqCard
+              titreColonne={contenu.megaMenuColonneImageDto.titreColonne}
+              html={contenu.megaMenuColonneImageDto.html}
+              image={contenu.megaMenuColonneImageDto.imageDto}
+              lien={contenu.megaMenuColonneImageDto.lienDto}
+              couleurTrait={contenu.megaMenuColonneImageDto.couleurTrait}
+            />
+          </div>  
+          {contenu.megaMenuColonneTexteDtos.map((item, index) => (
+              <div className='SqMegaMenu-MenuItem' key={index}>
+                <h3 className={`couleurTrait--${item.couleurTrait.replace(/ /g,'')}`}>{item.titreColonne}</h3>
+                <ul>
+                  {item.lienDtos.map((lien, index) => (
+                    <li key={index}>
+                      <SqLink href={lien.urlTo} text={lien.texte} variant="megamenu" />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+          ))}
       </div>
-    </div>
+    </motion.div>
+    </AnimatePresence>
   )
 }

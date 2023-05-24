@@ -1,0 +1,221 @@
+.sq-icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+}
+
+.backTriangleBottomRight {
+  width: 650px;
+  height: 563px;
+  max-inline-size: 218px;
+  background-image: url(svg/sqj.graphic.back.triangle.bottom.right.svg);
+}
+
+.backTriangleTopLeft {
+  width: 650px;
+  height: 563px;
+  max-inline-size: 218px;
+  background-image: url(svg/sqj.graphic.back.triangle.top.left.svg);
+}
+
+.iconClose {
+  width: 15px;
+  height: 15px;
+  background-image: url(svg/close.svg);
+  margin: 10px;
+}
+
+.iconInfo {
+  width: 20px;
+  height: 20px;
+  background-image: url(svg/sqj.info.icon.svg);
+
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(284deg) brightness(103%) contrast(101%);
+}
+
+.iconInfoBleu {
+  width: 20px;
+  height: 20px;
+  background-image: url(svg/sqj.info.icon.bleu.svg);
+}
+
+.iconInfoBleuSerif {
+  width: 32px;
+  height: 32px;
+  background-image: url(svg/sqj.info.icon.bleu.serif.svg);
+}
+
+.iconAvertissement {
+  width: 20px;
+  height: 20px;
+  background-image: url(svg/sqj.avertissement.icon.svg);
+
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(284deg) brightness(103%) contrast(101%);
+}
+
+.iconErreur {
+  width: 20px;
+  height: 20px;
+  background-image: url(svg/sqj.erreur.icon.svg);
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(284deg) brightness(103%) contrast(101%);
+}
+
+.iconSucces {
+  width: 20px;
+  height: 20px;
+  background-image: url(svg/sqj.succes.icon.svg);
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(284deg) brightness(103%) contrast(101%);
+}
+
+.iconSuccesVert {
+  width: 26px;
+  height: 26px;
+  background: transparent url("svg/sqj.success.info.icon.vert.svg") 0% 0% no-repeat padding-box;
+  background-position: center center;
+  opacity: 1;
+}
+
+.iconSoquij {
+  width: 234px;
+  height: 167px;
+  background-image: url(svg/sqj.logo.svg);
+}
+
+.textTitreLogin {
+  width: 299px;
+  height: 28px;
+  background-image: url(svg/sqj.h4.svg);
+}
+
+.iconPasswordVisible {
+  width: 28px;
+  height: 28px;
+  margin-left: 1px;
+  margin-right: -1px;
+  background: transparent url("svg/sqj.password.hidden.svg") 0% 0% no-repeat padding-box;
+  background-position: center center;
+  opacity: 1;
+}
+
+.iconPasswordHidden {
+  width: 28px;
+  height: 28px;
+  background: transparent url("svg/sqj.password.visible.svg") 0% 0% no-repeat padding-box;
+  background-position: center center;
+  opacity: 1;
+}
+
+.iconSendEmailMonitor {
+  display: block;
+  width: 64px;
+  height: 64px;
+  background: transparent url("svg/send-email-monitor.min.svg") 0% 0% no-repeat padding-box;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+}
+
+.iconCopy {
+  width: 1rem;
+  height: 1rem;
+  background: transparent url("svg/icone-copier.svg") 0% 0% no-repeat padding-box;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+}
+
+.iconCadenas {
+  width: 67px;
+  height: 67px;
+  background: transparent url("svg/icone_cadenas.svg") 0% 0% no-repeat padding-box;
+  background-position: center center;
+  opacity: 1;
+}
+
+.iconNoCellPhone {
+  width: 67px;
+  height: 67px;
+  background: transparent url("svg/icone_cellulaire-non-disponible.svg") 0% 0% no-repeat padding-box;
+  background-position: center center;
+  opacity: 1;
+}
+
+.iconErreurSysteme {
+  width: 192px;
+  height: 192px;
+  border-radius: 50%;
+  background-color: #9e2b2f;
+  background-image: url("svg/icone_cog-exclamation-mark.svg");
+  background-size: 96px 96px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1023px) {
+  .iconErreurSysteme {
+    width: 96px;
+    height: 96px;
+    background-size: 48px 48px;
+  }
+}
+
+.iconCustomerSupport {
+  width: 24px;
+  height: 24px;
+  background-image: url("svg/icone_headphones-customer-support@24x24.svg");
+}
+
+.iconWindowRefresh {
+  width: 24px;
+  height: 24px;
+  background-image: url("svg/icone_app-window-refresh@24x24.svg");
+}
+
+.iconClock {
+  width: 24px;
+  height: 24px;
+  background-image: url("svg/icone_time-clock-circle@24x24.svg");
+}
+
+.iconLienExterne {
+  width: 1rem;
+  height: 1rem;
+  background-image: url("svg/icone_lien-externe.svg");
+}
+
+.iconLienExterneLight {
+  width: 1rem;
+  height: 1rem;
+  background-image: url("svg/icone_lien-externe-bg-dark.svg");
+}
+
+.iconQuestion {
+  width: 1rem;
+  height: 1rem;
+  background-image: url("svg/icone_question.svg");
+}
+
+.iconFacebook {
+  width: 0.797rem;
+  height: 1.5rem;
+  background-image: url("svg/facebook-f-brands.svg");
+  background-size: 0.797rem 1.5rem;
+  filter: brightness(0) saturate(100%) invert(39%) sepia(26%) saturate(772%) hue-rotate(153deg) brightness(99%) contrast(88%);
+}
+
+.iconTwitter {
+  width: 1.5rem;
+  height: 1.25rem;
+  background-image: url("svg/twitter-brands.svg");
+  background-size: 1.5rem 1.25rem;
+  filter: brightness(0) saturate(100%) invert(39%) sepia(26%) saturate(772%) hue-rotate(153deg) brightness(99%) contrast(88%);
+}
+
+.iconLinkedin {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("svg/linkedin-in-brands.svg");
+  background-size: 1.5rem 1.5rem;
+  filter: brightness(0) saturate(100%) invert(39%) sepia(26%) saturate(772%) hue-rotate(153deg) brightness(99%) contrast(88%);
+}
