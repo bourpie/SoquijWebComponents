@@ -1,53 +1,80 @@
 import './SqNavPrimaire.scss'
-import { useState } from 'react';
-import * as NavigationMenu from '@radix-ui/react-navigation-menu';
+import { useState, useEffect } from 'react';
 import { SqNavPrimaireIcon } from '../SqNavPrimaireIcon/SqNavPrimaireIcon';
 import { SqNavPrimaireSmenu } from '../SqNavPrimaireSmenu/SqNavPrimaireSmenu';
-import { AnimatePresence } from 'framer-motion'
 
 export function SqNavPrimaire({
   liens
 }) {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  const [timeoutId, setTimeoutId] = useState(null);
 
-  const [value, setValue] = useState("");
+  const handleMouseEnter = (index) => {
+    clearTimeout(timeoutId);
+    setHoveredIndex(index);
+  };
 
-  console.log("CONTENU", liens)
+  const handleMouseLeave = () => {
+    const id = setTimeout(() => {
+      setHoveredIndex(null);
+    }, 1000);
+    setTimeoutId(id);
+  };
+
+  const handleAnimationEnd = () => {
+    setIsClosing(true);
+  }
+  
+  const handleClick = (e) => {
+    e.preventdefault();
+    setIsOpen(true);
+  };
+
+  useEffect(() => {
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [timeoutId]);
 
   return (  
-    <NavigationMenu.Root value={value} onValueChange={setValue}>
-      <NavigationMenu.List className="sq-nav-primaire">
-        {liens && liens.map((lien, index) => (
-          <NavigationMenu.Item key={index}>
+
+      <ul className="sq-nav-primaire">
+        {liens && liens.map((lien, i) => (
+          
+          <li 
+            key={i}
+            onMouseEnter={() => handleMouseEnter(i)}
+            onMouseLeave={handleMouseLeave}
+          >
             {lien.megaMenuDto ? (
               <>
-                <NavigationMenu.Trigger className='megamenu-trigger'>
-                  {lien.lienDto.texte} <SqNavPrimaireIcon />
-                </NavigationMenu.Trigger>
-               
-                  {value !== "open" && (
-                    <NavigationMenu.Content
-                      className="NavigationMenuContent"
-                    >
-                      <SqNavPrimaireSmenu contenu={lien.megaMenuDto} />
-                    </NavigationMenu.Content>
-
-                  )}
-                
+                <a 
+                  href='' 
+                  className='megamenu-trigger'
+                  aria-expanded={hoveredIndex === i ? 'true' : 'false'}
+                >
+                  {lien.lienDto.texte}
+                </a>
+                <button onClick={handleClick}><SqNavPrimaireIcon /></button>
+                <div className={`sq-nav-primaire--sous-menu ${hoveredIndex === i ? 'show' : ''}`}>
+                <SqNavPrimaireSmenu contenu={lien.megaMenuDto} />
+              </div> 
               </>
             ) : (
-              <NavigationMenu.Link
+              <a
               href={lien.lienDto.texte}
               target="_blank"
               rel="noopener noreferrer"
               className='megamenu-trigger'
             >
               Trouver une décision
-            </NavigationMenu.Link>
+            </a>
             )}
-        </NavigationMenu.Item>
+        </li>
         ))}
-      </NavigationMenu.List>
-      <NavigationMenu.Viewport /> 
-    </NavigationMenu.Root>  
+      </ul>
   )
 }
