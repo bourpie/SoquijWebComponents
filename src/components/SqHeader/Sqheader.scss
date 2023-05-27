@@ -1,25 +1,28 @@
 .soquij-header {
     position: sticky;
     top: 0;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .0784313725);
     width: 100hw;
     display: flex;
-    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    background-color: #ffffff;
     z-index: 1500;
 
     .soquij-nav {
-        display: grid;
         width: 100vw;
-        max-width: 1920px;
-        margin: auto;
-        padding-inline: 2rem;
-        grid-template-columns: repeat(12, minmax(0, 1fr));
-        grid-template-rows: max-content;
-        grid-column-gap: 2rem;
-        box-sizing: border-box;
-        padding-bottom: 1.5rem;
-        padding-top: 1.125rem;
+        position: relative;
+        background-color: #ffffff;
+        box-shadow: 0px 3px 6px #00000014;
+
+        &--wrapper {
+            display: grid;
+            padding-inline: 2rem;
+            grid-template-rows: max-content;
+            grid-column-gap: 2rem;
+            box-sizing: border-box;
+            padding-bottom: 1.5rem;
+            padding-top: 1.125rem;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            max-width: 1920px;
+            margin: 0 auto;
+        }
 
         &--liens-secondaires {
 

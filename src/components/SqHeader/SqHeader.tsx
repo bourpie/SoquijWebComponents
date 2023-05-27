@@ -32,24 +32,26 @@ export const SqHeader = () => {
       <nav 
         aria-label="Navigation principale"
         className="soquij-nav"
-        >
-        <div className="soquij-nav--liens-secondaires">
-          <SqNavSecondaire liens={liensSecondaires} />
-        </div>
-        <div className='soquij-nav--toolbar'>
-          <div className='soquij-nav--logo'>
-            <SqLogoSoquij
-              href={siteUrl}
-              src={logo}
-              alt={logoAlt}
-            />
+      >
+        <div className="soquij-nav--wrapper">
+          <div className="soquij-nav--liens-secondaires">
+            <SqNavSecondaire liens={liensSecondaires} />
           </div>
-          <div className='soquij-nav--megamenu'>
-            <SqNavPrimaire liens={liensPrimaires} />
-          </div>
-          <div className='soquij-nav--boutons'>
-              <SqButton href="" variant="outlined" label="Nous joindre" />
-              <SqButton href="" label="Se connecter" />
+          <div className='soquij-nav--toolbar'>
+            <div className='soquij-nav--logo'>
+              <SqLogoSoquij
+                href={siteUrl}
+                src={logo}
+                alt={logoAlt}
+              />
+            </div>
+            <div className='soquij-nav--megamenu'>
+              <SqNavPrimaire liens={liensPrimaires} />
+            </div>
+            <div className='soquij-nav--boutons'>
+                <SqButton href="" variant="outlined" label="Nous joindre" />
+                <SqButton href="" label="Se connecter" />
+            </div>
           </div>
         </div>
       </nav>
