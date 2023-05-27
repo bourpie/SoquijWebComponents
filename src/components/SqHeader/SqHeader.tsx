@@ -1,3 +1,4 @@
+
 import './SqHeader.scss';
 import { useState, useEffect } from 'react';
 import { SqButton } from '../SqButton/SqButton';
@@ -12,6 +13,7 @@ export const SqHeader = () => {
   const [siteUrl, setSiteUrl] = useState("")
   const [liensSecondaires, setLiensSecondaires] = useState([])
   const [liensPrimaires, setLiensPrimaires] = useState([])
+  const [boutonsActions, setBoutonsActions] = useState([])
 
   const VITE_URL_API = import.meta.env.VITE_URL_API
 
@@ -23,6 +25,7 @@ export const SqHeader = () => {
     await setLogoAlt(json.headerDto.logo.lienDto.name)
     await setLiensSecondaires(json.headerDto.lienSecondaireDtos)
     await setLiensPrimaires(json.headerDto.navigationDto.menuPrincipalDtos)
+    await setBoutonsActions(json.headerDto.boutonActionDtos)
   }
 
   useEffect(() => {
@@ -51,8 +54,14 @@ export const SqHeader = () => {
               <SqNavPrimaire liens={liensPrimaires} />
             </div>
             <div className='soquij-nav--boutons'>
-                <SqButton href="" variant="outlined" label="Nous joindre" />
-                <SqButton href="" label="Se connecter" />
+              { boutonsActions.map((bouton, i) => (
+                <SqButton 
+                  key={i} 
+                  href={bouton.urlTo}
+                  label={bouton.texte} 
+                  variant={i === 0 ? 'outlined' : 'contained'}
+                />
+              ))}
             </div>
           </div>
         </div>

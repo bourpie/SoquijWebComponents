@@ -1,3 +1,5 @@
+@import '../../Styles/couleurs';
+
 .sq-nav-primaire--sous-menu {
     display: none;
     opacity: 0;
@@ -42,6 +44,38 @@
                 grid-row-end: span 2;
                 margin-bottom: 1.5rem;
             }
+
+            h3 {
+                font-family: Roboto, sans-serif;
+                font-size: 1rem;
+                font-weight: bold;
+                letter-spacing: 0.16px;
+                padding-bottom: 0.375rem;
+                border-bottom-width: 3px;
+                border-bottom-style: solid;
+                margin-bottom: 2.25rem;
+                border-color: $SqOrange;
+
+                &.titre-trait--Bleu {
+                    border-color: $SqOrange;
+                }
+
+                &.couleurTrait--BleuTadoussac {
+                    border-color: $SqBleuTadoussac;
+                }
+
+                &.couleurTrait--RougeRougemont {
+                    border-color: $SqRougeRougemont;
+                }
+
+                &.couleurTrait--VertTremblant {
+                    border-color: $SqVertTremblant;
+                }
+            }
+
+            .sq-link {
+                margin-bottom: 2.25rem;
+            }
         }
 
         ul {
@@ -51,9 +85,6 @@
         }
     }
 }
-
-
-
 
 @keyframes fade-in {
     0% {

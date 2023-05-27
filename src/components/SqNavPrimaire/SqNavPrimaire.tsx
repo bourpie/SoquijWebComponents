@@ -79,6 +79,9 @@ export function SqNavPrimaire({
                   onClick={() => handleClick(i)}
                   onFocus={() => handleFocus(i)}
                 >
+                  <span className="visually-hidden">
+                    {hoveredIndex === i ? `Fermer le sous-menu de la catégorie ${lien.lienDto.texte}` : `Ouvrir le sous-menu de la catégorie ${lien.lienDto.texte}`}
+                  </span>
                   <SqNavPrimaireIcon />
                 </button>
                 <div className={`sq-nav-primaire--sous-menu ${hoveredIndex === i ? 'show' : ''}`}>
