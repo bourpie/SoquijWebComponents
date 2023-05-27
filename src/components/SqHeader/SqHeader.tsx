@@ -13,8 +13,10 @@ export const SqHeader = () => {
   const [liensSecondaires, setLiensSecondaires] = useState([])
   const [liensPrimaires, setLiensPrimaires] = useState([])
 
+  const VITE_URL_API = import.meta.env.VITE_URL_API
+
   async function getContent() {
-    const response = await fetch("https://api-aristote.soquij.qc.ca/Contenu/fr");
+    const response = await fetch(VITE_URL_API);
     const json = await response.json();
     await setLogo(json.headerDto.logo.url)
     await setSiteUrl(json.headerDto.logo.lienDto.urlTo)
