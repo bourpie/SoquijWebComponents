@@ -4,9 +4,7 @@ import { SqCard } from '../SqCard'
 
 export function SqNavPrimaireSmenu({contenu}) {
   return (
-
       <div key={contenu} className="wrapper">
-        
           <div className='SqMegaMenu-MenuItem SqMegaMenu-ColonneImage'>
             <SqCard
               titreColonne={contenu.megaMenuColonneImageDto.titreColonne}

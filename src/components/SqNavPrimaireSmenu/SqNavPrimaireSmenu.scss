@@ -1,17 +1,17 @@
 .sq-nav-primaire--sous-menu {
     display: none;
-    background: #f2f2f2;
     opacity: 0;
-    transform: translateY(-50px);
+    background: #eeeeee;
     position: absolute;
+    z-index: -1;
     left: 0;
-    top: 152px;
+    top: 150px;
     width: 100%;
     height: auto;
 
     &.show {
         display: block;
-        animation: slide-down 1000ms forwards, fade-in 500ms forwards;
+        animation: slide-down 500ms forwards, fade-in 500ms forwards;
     }
 
     &.isClosing {
@@ -24,7 +24,8 @@
         grid-gap: 1.5rem;
         max-width: 1920px;
         margin: 0 auto;
-        padding-block: 96px;
+        padding-top: 4rem;
+        padding-bottom: 2.5rem;
         padding-inline: 1.5rem;
 
         .SqMegaMenu-MenuItem {
@@ -80,16 +81,18 @@
     }
 
     100% {
-        transform: translateY(-50px);
+        transform: translateY(-100%);
     }
 }
 
 @keyframes slide-down {
     0% {
-        transform: translateY(-50px);
+        transform: translateY(-100%);
+        opacity: 0;
     }
 
     100% {
         transform: translateY(0);
+        opacity: 1;
     }
 }

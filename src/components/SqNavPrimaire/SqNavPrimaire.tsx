@@ -1,5 +1,5 @@
 import './SqNavPrimaire.scss'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { SqNavPrimaireIcon } from '../SqNavPrimaireIcon/SqNavPrimaireIcon';
 import { SqNavPrimaireSmenu } from '../SqNavPrimaireSmenu/SqNavPrimaireSmenu';
 
@@ -7,9 +7,15 @@ export function SqNavPrimaire({
   liens
 }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
   const [timeoutId, setTimeoutId] = useState(null);
+  const lastFocusedButtonRef = useRef(null);
+
+  const handleFocus = (index) => {
+    const lastTriggerButton = document.querySelector('button:focus');
+    if (lastTriggerButton) {
+      lastFocusedButtonRef.current = lastTriggerButton; // Store the last focused button
+    }
+  };
 
   const handleMouseEnter = (index) => {
     clearTimeout(timeoutId);
@@ -27,14 +33,25 @@ export function SqNavPrimaire({
     setIsClosing(true);
   }
   
-  const handleClick = (e) => {
-    e.preventdefault();
-    setIsOpen(true);
+  const handleClick = (index) => {
+    if (hoveredIndex === index) {
+      setHoveredIndex(null);
+    } else {
+      setHoveredIndex(index);
+    }
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Escape') {
+      lastFocusedButtonRef.current.focus(); 
+      setHoveredIndex(null); // Fermer le menu
+    }
   };
 
   useEffect(() => {
-
+    document.addEventListener('keydown', handleKeyDown);
     return () => {
+      document.removeEventListener('keydown', handleKeyDown);
       clearTimeout(timeoutId);
     };
   }, [timeoutId]);
@@ -58,7 +75,12 @@ export function SqNavPrimaire({
                 >
                   {lien.lienDto.texte}
                 </a>
-                <button onClick={handleClick}><SqNavPrimaireIcon /></button>
+                <button 
+                  onClick={() => handleClick(i)}
+                  onFocus={() => handleFocus(i)}
+                >
+                  <SqNavPrimaireIcon />
+                </button>
                 <div className={`sq-nav-primaire--sous-menu ${hoveredIndex === i ? 'show' : ''}`}>
                 <SqNavPrimaireSmenu contenu={lien.megaMenuDto} />
               </div> 
