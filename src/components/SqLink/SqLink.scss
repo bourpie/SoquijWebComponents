@@ -7,9 +7,16 @@
     line-height: 1.5rem;
     letter-spacing: 0.16px;
     text-decoration: none;
+    position: relative;
 
-    &~.sq-icon {
+    .sq-icon {
         margin-left: .5rem;
+        position: absolute;
+    }
+
+    &:focus-visible {
+        outline: 0;
+        box-shadow: 0 0 0 2px #fff, 0 0 0 5px #007aff;
     }
 
     &--variant-default {
@@ -40,7 +47,7 @@
             background-color: $SqGrisMoyen;
         }
 
-        &~.sq-icon {
+        .sq-icon {
             margin-left: .3rem;
             width: .75rem;
             height: .75rem;

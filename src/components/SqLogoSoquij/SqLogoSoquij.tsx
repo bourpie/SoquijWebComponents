@@ -24,7 +24,7 @@ export function SqLogoSoquij({
     ...props
 }:SqLogoSoquijProps) {
   return (
-    <a 
+    <a style={{display: "block"}}
         href={href}
         {...props}
     >

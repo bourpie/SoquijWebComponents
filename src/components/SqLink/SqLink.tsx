@@ -66,24 +66,22 @@ export function SqLink({
   }
 
   return ( 
-    <>
-      <a
-        href={href}
-        className={[
-          'sq-link', 
-          variants(), 
-          sizes(),
-          themes()
-        ].join(' ').trim()}
-        rel={rel}
-        target={target}
-        title={title}
-        {...props}
-      >
-        {text}
-      </a>
+    <a
+      href={href}
+      className={[
+        'sq-link', 
+        variants(), 
+        sizes(),
+        themes()
+      ].join(' ').trim()}
+      rel={rel}
+      target={target}
+      title={title}
+      {...props}
+    >
+      {text}
       {isNewTab && <IconeLienExterne />}
-    </>
+    </a>  
   );
 }
 
