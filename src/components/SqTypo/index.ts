@@ -1,0 +1,1 @@
+export { SqTypo } from './SqTypo'

@@ -1,1 +1,0 @@
-export { SqCard } from './SqCard'

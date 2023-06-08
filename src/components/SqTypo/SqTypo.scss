@@ -1,0 +1,22 @@
+.MuiTypography {
+
+    &-root {
+        font-family: Roboto, sans-serif;
+        color: #000016;
+    }
+
+    &-h1 {
+        font-size: 44px;
+        font-weight: bold;
+        line-height: 58px;
+        letter-spacing: 0.44px;
+    }
+
+    &-h2 {
+        font-size: 34px;
+        font-weight: bold;
+        line-height: 42px;
+        letter-spacing: 0.34px;
+    }
+
+}

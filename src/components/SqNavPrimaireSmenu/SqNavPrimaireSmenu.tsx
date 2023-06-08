@@ -1,12 +1,12 @@
 import './SqNavPrimaireSmenu.scss'
 import { SqLink } from '../SqLink';
-import { SqCard } from '../SqCard'
+import { SqNavCard } from '../SqNavCard'
 
 export function SqNavPrimaireSmenu({contenu}) {
   return (
       <div key={contenu} className="wrapper">
           <div className={`SqMegaMenu-MenuItem SqMegaMenu-ColonneImage`}>
-            <SqCard
+            <SqNavCard
               titreColonne={contenu.megaMenuColonneImageDto.titreColonne}
               html={contenu.megaMenuColonneImageDto.html}
               image={contenu.megaMenuColonneImageDto.imageDto}

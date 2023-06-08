@@ -1,5 +1,6 @@
 export * from './components/SqHeader'
 export * from './components/SqButton'
+export * from './components/SqLink'
 export * from './components/SqLogoSoquij'
 export * from './components/SqNavPrimaire'
 export * from './components/SqNavSecondaire'

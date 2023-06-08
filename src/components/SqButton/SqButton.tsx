@@ -6,13 +6,13 @@ interface ButtonProps {
   /**
    * Variantes
    */
-  variant?: 'contained' | 'outlined' | 'plain';
+  variant: 'contained' | 'outlined' | 'plain';
   /**
    * Styles disponibles
    */
   color?: 'primary' | 'secondary';
   /**
-   * Is this the principal call to action on the page?
+   * L'url. Si externe à SOQUIJ, le lien affiche une icône externe
    */
   href?: string;
   /**
@@ -35,7 +35,8 @@ interface ButtonProps {
 
 /**
  * Principales intéractions visuelles des boutons. Voir aussi 
- * (le guide de style Web)[https://xd.adobe.com/view/87c9ca2a-bd97-4d22-a0a5-ff3cfbf80dda-d29a/screen/fb6aef8f-6f85-4383-b771-fb5bb44d2b90]
+ * le guide de style Web :
+ * https://xd.adobe.com/view/87c9ca2a-bd97-4d22-a0a5-ff3cfbf80dda-d29a/screen/fb6aef8f-6f85-4383-b771-fb5bb44d2b90]
  */
 export const SqButton = ({
   variant = 'contained',
