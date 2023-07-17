@@ -1,0 +1,1 @@
+export { SqFooter } from './SqFooter'

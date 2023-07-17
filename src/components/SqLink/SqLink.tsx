@@ -5,7 +5,7 @@ interface LinkProps {
   /**
    * Variantes
    */
-  variant?: 'default' | 'footer' | 'megamenu';
+  variant?: 'default' | 'footer' | 'megamenu' | 'copyright';
   /**
    * Texte du lien
    */

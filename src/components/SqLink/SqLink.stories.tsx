@@ -24,11 +24,28 @@ export const Small: Story = {
     size: 'small'
   },
 };
-export const Footer: Story = {
+export const FooterLienImportant: Story = {
   args: {
-    text: 'Lien small footer',
-    href: 'https://google.com',
-    variant: 'footer'
+    text: 'Lien externe',
+    variant: 'footer',
+    href: 'https://soquij.qc.ca'
+  },
+  decorators: [
+      (Story) => (
+          <div style={{
+            backgroundColor: 'rgb(29, 33, 65)',
+            padding: '3rem'
+          }}>
+              <Story />
+          </div>
+      )
+  ]
+}
+export const FooterCopyright: Story = {
+  args: {
+    text: 'ministre de la Justice du Québec',
+    href: 'https://www.justice.gouv.qc.ca',
+    variant: 'copyright'
   },
 };
 

@@ -49,6 +49,22 @@ button.Mui-focusVisible {
     }
 
     &--variant-footer {
+        color: white;
+        transition: all .4s ease-in-out;
+        text-decoration: none;
+        text-decoration-thickness: 1px;
+        text-decoration-color: red;
+        text-underline-offset: 4.5px;
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            text-decoration-thickness: 1px;
+            text-decoration-color: red !important;
+            text-decoration: underline;
+        }
+    }
+
+    &--variant-copyright {
         font-size: 0.8125rem;
         line-height: 1.25rem;
         letter-spacing: 0.13px;
@@ -90,6 +106,14 @@ button.Mui-focusVisible {
 
     }
 
+    &--theme-blue {
+        color: white;
+
+        &:hover {
+            background-color: rgb(29, 33, 65);
+        }
+    }
+
     &--theme-dark {
         color: $SqGrisRouyn;
 
@@ -97,5 +121,7 @@ button.Mui-focusVisible {
             background-color: rgba(255, 255, 255, 0.15);
         }
     }
+
+
 
 }

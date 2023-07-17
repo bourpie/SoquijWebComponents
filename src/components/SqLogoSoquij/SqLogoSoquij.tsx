@@ -13,7 +13,17 @@ interface SqLogoSoquijProps {
     /**
      * Texte alternatif de l'image
      */
-    alt?: string
+    alt?: string,
+
+    /**
+     * Hauteur de l'image
+     */
+    height?: number,
+
+    /**
+     * Largeur de l'image
+     */
+    width?: number
 
 }
 
@@ -21,14 +31,22 @@ export function SqLogoSoquij({
     href, 
     src, 
     alt,
+    height = 71,
+    width = 170,
     ...props
 }:SqLogoSoquijProps) {
   return (
-    <a style={{display: "block"}}
+    <>
+    {href ? (
+      <a style={{display: "block"}}
         href={href}
         {...props}
-    >
-        <img height="71" width="170" src={src} alt={alt} />
-    </a>
+      >
+        <img height={height} width={width} src={src} alt={alt} />
+      </a>
+    ) : (
+      <img height={height} width={width} src={src} alt={alt} />
+    )}
+    </>
   )
 }
