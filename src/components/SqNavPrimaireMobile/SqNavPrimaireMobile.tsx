@@ -28,7 +28,6 @@ export function SqNavPrimaireMobile() {
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
-                    id="panel1a-header"
                 >
                     <Button>allo</Button>
                 </AccordionSummary>
@@ -43,23 +42,25 @@ export function SqNavPrimaireMobile() {
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                 >
-                    <SqTypo>Accordion 2</SqTypo>
+                    <Button>allo</Button>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <SqTypo>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                    </SqTypo>
+                <SqTypo text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                    malesuada lacus ex, sit amet blandit leo lobortis eget." />
                 </AccordionDetails>
                 </Accordion>
-                <Accordion disabled>
+                <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel3a-content"
                     id="panel3a-header"
                 >
-                    <SqTypo>Disabled Accordion</SqTypo>
+                    <Button>allo</Button>
                 </AccordionSummary>
+                <AccordionDetails>
+                    <SqTypo text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                    malesuada lacus ex, sit amet blandit leo lobortis eget." />
+                </AccordionDetails>
             </Accordion>
     </div>
   )

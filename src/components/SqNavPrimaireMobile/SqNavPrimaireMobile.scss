@@ -1,0 +1,14 @@
+.MuiAccordionSummary-root {
+    padding-left: 0 !important;
+
+    .MuiAccordionSummary-content {
+        margin: 0;
+
+        .MuiButtonBase-root {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            text-align: left;
+        }
+    }
+}
