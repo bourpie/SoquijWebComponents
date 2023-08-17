@@ -14,7 +14,7 @@ colorSecondary: '#585C6D',
 // UI
 appBg: '#ffffff',
 appContentBg: '#ffffff',
-appBorderColor: '#585C6D',
+appBorderColor: '#d9dbe2',
 appBorderRadius: 4,
 
 // Text colors
