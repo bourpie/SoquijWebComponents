@@ -1,0 +1,37 @@
+import { Meta } from "@storybook/blocks"
+import { ColorPalette, ColorItem } from "@storybook/blocks";
+
+<Meta title="Couleurs" />
+
+<ColorPalette>
+    <ColorItem
+        title="Orange Soquij"
+        subtitle="Couleur de référence : #df6200 (index 800)"
+        colors={{
+            50: "#FDF1DF",
+            100: "#FBE9D0",
+            200: "#F7C47C",
+            300: "#F4AD49",
+            400: "#F29B23",
+        }}
+    />
+    <ColorItem
+        colors={{
+            500: "#EF8B00",
+            600: "#EC8000",
+            700: "#E67000",
+            800: "#DF6200",
+            900: "#C35600",
+        }}
+    />
+    <ColorItem
+        title="Messages"
+        subtitle="Error"
+        colors={{
+            Light: "#D45C58",
+            Main: "#EC8000",
+            Dark: "#E67000",
+        }}
+    />
+
+</ColorPalette>
