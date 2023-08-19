@@ -15,7 +15,15 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primaire: Story = {
   args: {
-    label: 'Phrase d\'action'
+    label: 'Phrase d\'action',
+    color: 'primary',
+    variant: 'contained'
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File",
+    },
   },
 };
 export const Secondaire: Story = {
@@ -37,10 +45,11 @@ export const Bouton_texte: Story = {
     variant: 'plain'
   },
 };
-export const Large: Story = {
+export const Disabled: Story = {
   args: {
     size: 'large',
     label: 'Phrase d\'action',
+    disabled: true
   },
 };
 export const Small: Story = {
