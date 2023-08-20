@@ -21,8 +21,9 @@ export const Primaire: Story = {
   },
   parameters: {
     design: {
-      type: "figma",
-      url: "https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File",
+      type: "figspec",
+      url: "https://www.figma.com/file/4qwskmxOzMNgvtHQq6nFNV/Convertify-Sketch%2FAdobe%2FGoogle-(Community)?type=design&node-id=1%3A5352&mode=design&t=KpsiuoOjxt0FrTSl-1",
+      accessToken: import.meta.env.VITE_STORYBOOK_FIGMA_ACCESS_TOKEN
     },
   },
 };

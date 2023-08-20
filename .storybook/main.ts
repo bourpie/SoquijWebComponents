@@ -7,7 +7,7 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
     "@storybook/addon-designs",
-    "@storybook/addon-mdx-gfm"
+    "@geometricpanda/storybook-addon-iframe",
   ],
   framework: {
     name: "@storybook/react-vite",
