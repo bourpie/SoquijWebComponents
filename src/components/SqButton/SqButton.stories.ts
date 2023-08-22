@@ -39,6 +39,13 @@ export const Outlined: Story = {
     label: 'Phrase d\'action',
     variant: 'outlined'
   },
+  parameters: {
+    design: {
+      type: "figspec",
+      url: "https://www.figma.com/file/4qwskmxOzMNgvtHQq6nFNV/SOQUIJ---Guide-de-style-Web?type=design&node-id=88-232&mode=design&t=2J0iLzMEAuB6E6DF-4",
+      accessToken: import.meta.env.VITE_STORYBOOK_FIGMA_ACCESS_TOKEN
+    },
+  },
 };
 export const Bouton_texte: Story = {
   args: {
