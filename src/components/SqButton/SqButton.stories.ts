@@ -17,7 +17,8 @@ export const Primaire: Story = {
   args: {
     label: 'Phrase d\'action',
     color: 'primary',
-    variant: 'contained'
+    variant: 'contained',
+    disabled: false,
   },
   parameters: {
     design: {
@@ -31,7 +32,8 @@ export const Secondaire: Story = {
   args: {
     label: 'Phrase d\'action',
     color: 'secondary',
-    variant: 'outlined'
+    variant: 'outlined',
+    disabled: false,
   },
   parameters: {
     design: {
@@ -44,7 +46,8 @@ export const Secondaire: Story = {
 export const Outlined: Story = {
   args: {
     label: 'Phrase d\'action',
-    variant: 'outlined'
+    variant: 'outlined',
+    disabled: false,
   },
   parameters: {
     design: {
@@ -57,7 +60,8 @@ export const Outlined: Story = {
 export const Bouton_texte: Story = {
   args: {
     label: 'Phrase d\'action',
-    variant: 'plain'
+    variant: 'plain',
+    disabled: false,
   },
   parameters: {
     design: {
@@ -85,5 +89,6 @@ export const Small: Story = {
   args: {
     size: 'small',
     label: 'Phrase d\'action',
+    disabled: false,
   },
 };

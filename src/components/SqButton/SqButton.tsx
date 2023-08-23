@@ -24,9 +24,13 @@ interface ButtonProps {
    */
   label: string;
   /**
+   * Bouton déactivé
+   */
+  disabled?: boolean;
+    /**
    * Loading in process
    */
-  loading?: boolean;
+    loading?: boolean;
   /**
    * Optional click handler
    */
@@ -44,19 +48,21 @@ export const SqButton = ({
   color,
   href,
   label,
+  disabled = false,
   loading = false,
   ...props
 }: ButtonProps) => {
 
   return (
       <Button
-        className='btn-soquij'
+        className={`btn-soquij ${loading? "btn-soquij-loading":""}`}
         variant={variant}
         color={color}
         type="button"
         size={size}
         href={href}
-        disabled={loading}
+        loading={loading}
+        disabled={disabled || loading}
         disableElevation
         {...props}
       >
