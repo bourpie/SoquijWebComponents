@@ -22,7 +22,7 @@ export const Primaire: Story = {
   parameters: {
     design: {
       type: "figspec",
-      url: "https://www.figma.com/file/4qwskmxOzMNgvtHQq6nFNV/Convertify-Sketch%2FAdobe%2FGoogle-(Community)?type=design&node-id=1%3A5352&mode=design&t=KpsiuoOjxt0FrTSl-1",
+      url: "https://www.figma.com/file/4qwskmxOzMNgvtHQq6nFNV/SOQUIJ---Guide-de-style-Web?type=design&node-id=1%3A5352&mode=design&t=nL3F0HAoYnk69OvQ-1",
       accessToken: import.meta.env.VITE_STORYBOOK_FIGMA_ACCESS_TOKEN
     },
   },
@@ -33,6 +33,13 @@ export const Secondaire: Story = {
     color: 'secondary',
     variant: 'outlined'
   },
+  parameters: {
+    design: {
+      type: "figspec",
+      url: "https://www.figma.com/file/4qwskmxOzMNgvtHQq6nFNV/SOQUIJ---Guide-de-style-Web?type=design&node-id=178%3A336&mode=design&t=nL3F0HAoYnk69OvQ-1",
+      accessToken: import.meta.env.VITE_STORYBOOK_FIGMA_ACCESS_TOKEN
+    },
+  },
 };
 export const Outlined: Story = {
   args: {
@@ -42,7 +49,7 @@ export const Outlined: Story = {
   parameters: {
     design: {
       type: "figspec",
-      url: "https://www.figma.com/file/4qwskmxOzMNgvtHQq6nFNV/SOQUIJ---Guide-de-style-Web?type=design&node-id=88-232&mode=design&t=2J0iLzMEAuB6E6DF-4",
+      url: "https://www.figma.com/file/4qwskmxOzMNgvtHQq6nFNV/SOQUIJ---Guide-de-style-Web?type=design&node-id=88%3A232&mode=design&t=nL3F0HAoYnk69OvQ-1",
       accessToken: import.meta.env.VITE_STORYBOOK_FIGMA_ACCESS_TOKEN
     },
   },
@@ -52,12 +59,26 @@ export const Bouton_texte: Story = {
     label: 'Phrase d\'action',
     variant: 'plain'
   },
+  parameters: {
+    design: {
+      type: "figspec",
+      url: "https://www.figma.com/file/4qwskmxOzMNgvtHQq6nFNV/SOQUIJ---Guide-de-style-Web?type=design&node-id=182%3A350&mode=design&t=nL3F0HAoYnk69OvQ-1",
+      accessToken: import.meta.env.VITE_STORYBOOK_FIGMA_ACCESS_TOKEN
+    },
+  },
 };
 export const Disabled: Story = {
   args: {
     size: 'large',
     label: 'Phrase d\'action',
     disabled: true
+  },
+    parameters: {
+    design: {
+      type: "figspec",
+      url: "https://www.figma.com/file/4qwskmxOzMNgvtHQq6nFNV/SOQUIJ---Guide-de-style-Web?type=design&node-id=182%3A356&mode=design&t=nL3F0HAoYnk69OvQ-1",
+      accessToken: import.meta.env.VITE_STORYBOOK_FIGMA_ACCESS_TOKEN
+    },
   },
 };
 export const Small: Story = {

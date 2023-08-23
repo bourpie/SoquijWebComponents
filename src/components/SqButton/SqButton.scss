@@ -15,6 +15,7 @@
   --bg-color-active: #df6100;
   --bg-color-white: #FFFFFF;
   --bg-color-active-outline: #df6100;
+  --bg-color-disabled: rgba(223, 98, 0, 0.60);
 
   &.MuiButtonBase-root {
     font-family: var(--font-family);
@@ -91,8 +92,7 @@
   }
 
   &[disabled] {
-    border-color: #DBDCDB;
-    background: #F2F2F2;
+    background-color: var(--bg-color-disabled);
 
     .MuiCircularProgress-root {
       text-align: center;
