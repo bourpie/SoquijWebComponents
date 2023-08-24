@@ -30,7 +30,7 @@ interface ButtonProps {
     /**
    * Loading in process
    */
-    loading?: boolean;
+  loading?: boolean;
   /**
    * Optional click handler
    */

@@ -16,6 +16,7 @@
   --bg-color-white: #FFFFFF;
   --bg-color-active-outline: #df6100;
   --bg-color-disabled: rgba(223, 98, 0, 0.60);
+  --bg-color-loading: rgba(0, 0, 0, 0.12);
 
   &.MuiButtonBase-root {
     font-family: var(--font-family);
@@ -47,6 +48,8 @@
     }
 
     &.btn-soquij-loading.MuiButton-disableElevation[disabled] {
+      background-color: var(--bg-color-loading);
+
       .MuiCircularProgress-root {
         text-align: center;
         position: absolute;

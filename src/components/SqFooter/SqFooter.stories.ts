@@ -16,4 +16,9 @@ export const Default: Story = {
   args: {
     text: 'Mon footer',
   },
+  parameters: {
+    previewTabs: {
+      docs: { hidden: true },
+    },
+  }
 };
